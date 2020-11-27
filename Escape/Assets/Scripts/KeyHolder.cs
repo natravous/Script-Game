@@ -26,27 +26,9 @@ public class KeyHolder : MonoBehaviour
     {
         return keyList.Contains(keyType);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Key key = collision.GetComponent<Key>(); //collide with something that contain key component
-        if(key != null)
-        {
-            Addkey(key.GetKeyType());
-            Destroy(key.gameObject);
-        }
-
-        KeyDoor keyDoor = collision.GetComponent<KeyDoor>();
-        if(keyDoor != null)
-        {
-            if (ContainsKey(keyDoor.GetKeyType()))
-            {
-                //currently holding key to open this door
-                
-                RemoveKey(keyDoor.GetKeyType());
-                keyDoor.OpenDoor();
-            }
-        }
+    public List<Key.KeyType> getKey(){
+        return keyList;
     }
+
 
 }

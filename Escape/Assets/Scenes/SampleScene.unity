@@ -10979,6 +10979,9 @@ MonoBehaviour:
     power: 0
     runSpeed: 0
     runSpeedInitial: 0
+    crouch: 0
+  keyHolder: {fileID: 0}
+  crouch: 0
 --- !u!1 &1642535543
 GameObject:
   m_ObjectHideFlags: 0
@@ -11072,7 +11075,7 @@ GameObject:
   - component: {fileID: 1892900128}
   m_Layer: 8
   m_Name: Fox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11201,6 +11204,9 @@ MonoBehaviour:
     power: 0
     runSpeed: 0
     runSpeedInitial: 0
+    crouch: 0
+  keyHolder: {fileID: 0}
+  crouch: 0
 --- !u!114 &1892900125
 MonoBehaviour:
   m_ObjectHideFlags: 0

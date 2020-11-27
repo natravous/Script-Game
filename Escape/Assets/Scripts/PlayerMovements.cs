@@ -7,19 +7,21 @@ public class PlayerMovements : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
     public PlayerState playerState;
+    public KeyHolder keyHolder;
 
     float horizontalMove = 0f;
 
     
     bool run = false;
     bool jump = false;
-    bool crouch = false;
+    public bool crouch = false;
     // Start is called before the first frame update
     void Start()
     {
         playerState.power = 100f;
         playerState.runSpeed = 20f;
         Debug.Log(playerState.power);
+        keyHolder= gameObject.AddComponent<KeyHolder>() as KeyHolder;
     }
 
     // Update is called once per frame
@@ -66,7 +68,7 @@ public class PlayerMovements : MonoBehaviour
         Debug.Log(playerState.runSpeed);
         }
 
-        
+        playerState.crouch = crouch;
         // else if (power <100){
         //     power+=2;
         
@@ -106,5 +108,29 @@ public class PlayerMovements : MonoBehaviour
     public void OnCrouching(bool isCrouching)
     {
         animator.SetBool("IsCrouching", isCrouching);
+    }
+    private void OnTriggerEnter2D(Collider2D collision){
+        Debug.Log(collision);
+        Key key = collision.GetComponent<Key>(); //collide with something that contain key component
+        Debug.Log(keyHolder);
+        if(key != null)
+        {
+           keyHolder.Addkey(key.GetKeyType());
+           Destroy(key.gameObject);
+        }
+        
+        KeyDoor keyDoor = collision.GetComponent<KeyDoor>();
+        if(keyDoor != null)
+        {
+            if (keyHolder.ContainsKey(keyDoor.GetKeyType()))
+            {
+                //currently holding key to open this door
+                Debug.Log(playerState.crouch);
+                    keyHolder.RemoveKey(keyDoor.GetKeyType());
+                    keyDoor.OpenDoor();
+                
+                
+            }
+        }
     }
 }
