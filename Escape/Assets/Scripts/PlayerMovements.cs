@@ -21,7 +21,7 @@ public class PlayerMovements : MonoBehaviour
         playerState.power = 100f;
         playerState.runSpeed = 20f;
         Debug.Log(playerState.power);
-        keyHolder= gameObject.AddComponent<KeyHolder>() as KeyHolder;
+        keyHolder = gameObject.AddComponent<KeyHolder>() as KeyHolder;
     }
 
     // Update is called once per frame
@@ -49,7 +49,8 @@ public class PlayerMovements : MonoBehaviour
             crouch = false;
         }
 
-        if(playerState.power >=0 && playerState.power <=1000){
+        if(playerState.power >=0 && playerState.power <=100)
+        {
             if(Input.GetKeyDown(KeyCode.LeftShift))
             {
                 playerState.runSpeed = 40f;
@@ -109,7 +110,9 @@ public class PlayerMovements : MonoBehaviour
     {
         animator.SetBool("IsCrouching", isCrouching);
     }
-    private void OnTriggerEnter2D(Collider2D collision){
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         Debug.Log(collision);
         Key key = collision.GetComponent<Key>(); //collide with something that contain key component
         Debug.Log(keyHolder);
@@ -132,5 +135,7 @@ public class PlayerMovements : MonoBehaviour
                 
             }
         }
+
+        
     }
 }
