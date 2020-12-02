@@ -82,6 +82,7 @@
     <Compile Include="Assets\Cinemachine Example Scenes\Shared\Scripts\PlayerMoveOnSphere.cs" />
     <Compile Include="Assets\Cinemachine Example Scenes\Shared\Scripts\PlayerMovePhysics.cs" />
     <Compile Include="Assets\Cinemachine Example Scenes\Shared\Scripts\SpawnInCircle.cs" />
+    <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\AnimasiPintu.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CamFollow.cs" />
@@ -94,6 +95,8 @@
     <Compile Include="Assets\Scripts\PintuAuto.cs" />
     <Compile Include="Assets\Scripts\PlayerMovements.cs" />
     <Compile Include="Assets\Scripts\PlayerState.cs" />
+    <Compile Include="Assets\Scripts\TitikAkhir.cs" />
+    <Compile Include="Assets\StaminaBar.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Cinemachine Example Scenes\Scenes\Anywhere Door\ScreenCutoutShader.shader" />

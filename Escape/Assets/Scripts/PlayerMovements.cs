@@ -11,17 +11,24 @@ public class PlayerMovements : MonoBehaviour
 
     float horizontalMove = 0f;
 
-    
+    private WaitForSeconds regenEnergi = new WaitForSeconds(0.1f);
+    private Coroutine regenerasi;
+
     bool run = false;
     bool jump = false;
     public bool crouch = false;
     // Start is called before the first frame update
     void Start()
     {
-        playerState.power = 100f;
+        //playerState.power = 100;
+
+        playerState.currentEnergi = playerState.maxEnergi;
+
         playerState.runSpeed = 20f;
-        Debug.Log(playerState.power);
+        Debug.Log("Energi: " + playerState.currentEnergi);
         keyHolder = gameObject.AddComponent<KeyHolder>() as KeyHolder;
+
+        StaminaBar.instance.GetComponent<StaminaBar>();
     }
 
     // Update is called once per frame
@@ -49,24 +56,27 @@ public class PlayerMovements : MonoBehaviour
             crouch = false;
         }
 
-        if(playerState.power >=0 && playerState.power <=100)
+        if(playerState.currentEnergi >=0 && playerState.currentEnergi <=100)
         {
             if(Input.GetKeyDown(KeyCode.LeftShift))
             {
                 playerState.runSpeed = 40f;
                 Debug.Log("Shift on");
                 run = true;
-            } else if(Input.GetKeyUp(KeyCode.LeftShift))
+
+            }
+            else if(Input.GetKeyUp(KeyCode.LeftShift))
             {
                 playerState.runSpeed = 20f;
                 run = false;
                 Debug.Log("Shift off");
+
             // if(power <= 100){
             //     power = power-20;
             // }
             }
-        Debug.Log(playerState.power);
-        Debug.Log(playerState.runSpeed);
+        //Debug.Log(playerState.power);
+        //Debug.Log(playerState.runSpeed);
         }
 
         playerState.crouch = crouch;
@@ -82,24 +92,55 @@ public class PlayerMovements : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
         
-        if(run == true)
+        if(playerState.currentEnergi <= playerState.maxEnergi && run == true)
         {
             Debug.Log("RUNNNN");
-            playerState.power -= 1f;
-            if(playerState.power <= 0)
+            playerState.currentEnergi -= 1;
+            Debug.Log("Energi: " + playerState.currentEnergi);
+            StaminaBar.instance.UseStamina(1);
+
+
+            if (playerState.currentEnergi == 0)
             {
                 run = false;
                 // playerState.runSpeed = playerState.runSpeed + playerState.runSpeedInitial;
                 playerState.runSpeed = 20f;
+
+                Debug.Log("ENERGI HABIS");
+                
             }
-        }else
-        {
-            if(playerState.power <100)
+
+            if (regenerasi != null)
             {
-                playerState.power += .5f;
+                StopCoroutine(regenerasi);
             }
+
+            regenerasi = StartCoroutine(RegenEnergi());
+        }
+        else
+        {
+            //if(playerState.power <100)
+            //{
+            //    playerState.power += 1;
+            //}
+            
+
         }
     }
+
+    private IEnumerator RegenEnergi()
+    {
+        yield return new WaitForSeconds(2);
+
+        while(playerState.currentEnergi < playerState.maxEnergi)
+        {
+            playerState.currentEnergi += playerState.maxEnergi / 100;
+            yield return regenEnergi;
+            Debug.Log("Energi menjadi: " + playerState.currentEnergi);
+        }
+        regenerasi = null;
+    }
+
 
     public void OnLanding()
     {

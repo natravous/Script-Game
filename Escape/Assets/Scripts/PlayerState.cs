@@ -2,8 +2,9 @@
 [System.Serializable]
 public class PlayerState
 {
-    public float power;
+    public int maxEnergi = 100;
+    public int currentEnergi;
     public float runSpeed;
-    public float runSpeedInitial;
+    //public float runSpeedInitial;
     public bool crouch;
 }
