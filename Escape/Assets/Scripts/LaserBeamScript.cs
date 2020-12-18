@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LaserBeamScript : MonoBehaviour
 {
-    public GameObject laser;
+    //public GameObject laser;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +26,12 @@ public class LaserBeamScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "Player")
-        {
-            //gameObject.SetActive(false);
-            laser.SetActive(false);
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if(collision.tag == "Player")
+    //    {
+    //        //gameObject.SetActive(false);
+    //        laser.SetActive(false);
+    //    }
+    //}
 }

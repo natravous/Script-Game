@@ -627,7 +627,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OPTIONS
+  m_text: PILIHAN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6131e658f6439a44eb5940495ca4a413, type: 2}
   m_sharedMaterial: {fileID: 21851894514809118, guid: 6131e658f6439a44eb5940495ca4a413,
@@ -870,7 +870,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: QUIT
+  m_text: KELUAR
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6131e658f6439a44eb5940495ca4a413, type: 2}
   m_sharedMaterial: {fileID: 21851894514809118, guid: 6131e658f6439a44eb5940495ca4a413,
@@ -914,7 +914,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_firstOverflowCharacterIndex: -1
@@ -941,7 +941,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 928143834}
-    characterCount: 4
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY
+  m_text: MULAI
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6131e658f6439a44eb5940495ca4a413, type: 2}
   m_sharedMaterial: {fileID: 21851894514809118, guid: 6131e658f6439a44eb5940495ca4a413,
@@ -1098,7 +1098,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1024280710}
-    characterCount: 4
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -1535,7 +1535,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 36.736237}
-  m_SizeDelta: {x: 99.339386, y: 52.67746}
+  m_SizeDelta: {x: 109.835236, y: 52.67746}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264766538
 MonoBehaviour:

@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class ComputerScript : MonoBehaviour
 {
-    public GameObject laser;
+    public GameObject otherObject;
+    public Animator animator;
+    private AnimasiPintu pintu;
 
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +28,18 @@ public class ComputerScript : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+
             //gameObject.SetActive(false);
-            laser.SetActive(false);
+            //pintu.BukaPintu();
+            //otherObject.GetComponent<Animator>().SetBool("Buka", true);
+            //pintu2.SetBool("Buka", true);
+
+            otherObject.SetActive(false);
+            animator.SetBool("Stop", true);
+
         }
+
     }
+
+
 }

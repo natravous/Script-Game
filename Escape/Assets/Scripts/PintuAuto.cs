@@ -22,7 +22,7 @@ public class PintuAuto : MonoBehaviour
         if(collision.tag == "Player")
         {
             //gameObject.SetActive(false);
-            anim.SetBool("BukaPintu", true);
+            anim.SetBool("Buka", true);
         }
     }
 }

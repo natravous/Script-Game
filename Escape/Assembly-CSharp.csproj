@@ -82,7 +82,10 @@
     <Compile Include="Assets\Cinemachine Example Scenes\Shared\Scripts\PlayerMoveOnSphere.cs" />
     <Compile Include="Assets\Cinemachine Example Scenes\Shared\Scripts\PlayerMovePhysics.cs" />
     <Compile Include="Assets\Cinemachine Example Scenes\Shared\Scripts\SpawnInCircle.cs" />
+    <Compile Include="Assets\Coba.cs" />
     <Compile Include="Assets\LevelLoader.cs" />
+    <Compile Include="Assets\Linescript.cs" />
+    <Compile Include="Assets\Luncur.cs" />
     <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\AnimasiPintu.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
@@ -99,8 +102,10 @@
     <Compile Include="Assets\Scripts\PintuAuto.cs" />
     <Compile Include="Assets\Scripts\PlayerMovements.cs" />
     <Compile Include="Assets\Scripts\PlayerState.cs" />
+    <Compile Include="Assets\Scripts\StaminaBar.cs" />
     <Compile Include="Assets\Scripts\TitikAkhir.cs" />
-    <Compile Include="Assets\StaminaBar.cs" />
+    <Compile Include="Assets\Spwn.cs" />
+    <Compile Include="Assets\Sut.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Cinemachine Example Scenes\Scenes\Anywhere Door\ScreenCutoutShader.shader" />
