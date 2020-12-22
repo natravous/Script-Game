@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Sut : MonoBehaviour
 {
+    //objek
     public GameObject peluru;
 
+    //target
     public Transform player;
 
     private float timeBetweenShot;
     public float startTimeBetweenShot;
+
+    //jangkauan tembak
     public float stopDistance;
 
 
@@ -24,9 +28,7 @@ public class Sut : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-       
-
+    {  
         if(timeBetweenShot <= 0 && Vector2.Distance(transform.position, player.position) < stopDistance)
         {
             Instantiate(peluru, transform.position, Quaternion.identity);

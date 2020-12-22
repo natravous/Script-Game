@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pintu
+  - Tile
+  - GM
   layers:
   - Default
   - TransparentFX
