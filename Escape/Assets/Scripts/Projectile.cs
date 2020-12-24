@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Projectile: MonoBehaviour
 {
@@ -51,6 +52,7 @@ public class Projectile: MonoBehaviour
         {
             Debug.Log("KENA!");
             Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

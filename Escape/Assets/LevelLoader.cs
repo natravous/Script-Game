@@ -12,10 +12,10 @@ public class LevelLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            LoadNextLevel();
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    LoadNextLevel();
+        //}
     }
 
     public void LoadNextLevel()

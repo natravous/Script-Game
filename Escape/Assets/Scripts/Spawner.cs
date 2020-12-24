@@ -28,7 +28,6 @@ public class Spawner : MonoBehaviour
             
             //transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z + 90);
             timeBetweenSpawn = startTimeBetweenSpawn;
-
             
         }
         else
